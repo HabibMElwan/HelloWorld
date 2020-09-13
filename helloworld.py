@@ -459,7 +459,7 @@ def executeCmd(msg, text, txt, cmd, msg_id, receiver, sender, to, setKey):
                 settings['autoJoin']['status'] = False
                 line.sendMessage(to, 'Success deactivated autojoin')
         elif cond[0].lower() == 'reply':
-            if len(cond) < 2:
+            if len(cond) < 3:
                 return line.sendMessage(to, parsingRes(res).format_map(SafeDict(key=setKey.title())))
             if cond[1].lower() == 'on':
                 if settings['autoJoin']['reply']:
